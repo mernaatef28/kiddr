@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "556269759120",
+    "project_id": "taweret-3acad",
+    "storage_bucket": "taweret-3acad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556269759120:android:cd72085c8e7c9bf4760615",
+        "android_client_info": {
+          "package_name": "com.example.taweret"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556269759120-1ivq762u71ob4fcekdtiqf150ibq0dob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taweret",
+            "certificate_hash": "0116690ce4959cc67704fede8ff317aa4d51251f"
+          }
+        },
+        {
+          "client_id": "556269759120-n6n7gejmpre37ot3eh3b9f41dhap2l44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIZhD8HjpCDmSXe5ZdHv9eX0eHRgZIc-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556269759120-n6n7gejmpre37ot3eh3b9f41dhap2l44.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "556269759120-klgj2krtj3opk53fo9srfgtsf1fscfln.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taweret"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
