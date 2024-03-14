@@ -9,9 +9,9 @@
 
 <h2>project's team :</h2>
 
-1) merna Atef 
-2) Gehad Ahmed 
+1) Merna Atef
+2) Gehad Ahmed
 3) Rawan Sied
-4) Ismail Shrief 
+4) Ismail Sherif [@ThisIsMrIsmail](https://github.com/ThisIsMrIsmail/)
 5) Gehad Ahmed
 6) Mark Magdy
