@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class MyAppBar extends StatefulWidget {
-  const MyAppBar({super.key});
+  const MyAppBar({key});
 
   @override
   State<MyAppBar> createState() => _MyAppBarState();

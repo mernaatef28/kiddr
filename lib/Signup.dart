@@ -1,14 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:taweret/Login.dart';
+import 'package:taweret/LoginSiginupComponants/LoginSignupFooter.dart';
+import 'package:taweret/LoginSiginupComponants/LoginSignupHeader.dart';
 import 'package:taweret/componants/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:taweret/home.dart';
 import 'package:taweret/onbording_screen.dart';
 
 class MySignupPage extends StatefulWidget {
-  const MySignupPage({super.key});
+  const MySignupPage({key});
 
   @override
   State<MySignupPage> createState() => _MySignupPageState();
@@ -30,6 +32,8 @@ class _MySignupPageState extends State<MySignupPage> {
 
   @override
   Widget build(BuildContext context) {
+    MyLoginPage _createMyLoginPage() => MyLoginPage();
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -39,7 +43,11 @@ class _MySignupPageState extends State<MySignupPage> {
             const SizedBox(
               height: 30,
             ),
-            _heder(context),
+            LoginSignupHeader(
+              pageTitle: "Sign up",
+              imageLocation: "assets/login.svg",
+              subtitle: "Create new account",
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -47,35 +55,18 @@ class _MySignupPageState extends State<MySignupPage> {
             const SizedBox(
               height: 20,
             ),
-            _haveAccount(context),
+            LoginSignupFooter(
+              question: "Already have account? ",
+              nextPage: _createMyLoginPage,
+              btnName: "Login",
+            )
           ],
         ),
       ),
     );
   }
 
-  _heder(context) {
-    return Column(
-      children: [
-        const Text(
-          "Sign up",
-          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(
-          height: 15,
-        ),
-        SvgPicture.asset("assets/login.svg"),
-        const SizedBox(
-          height: 10,
-        ),
-        const Text(
-          "Create new account",
-          style: TextStyle(fontSize: 18),
-        ),
-      ],
-    );
-  }
-
+// ////////////////////////////////////////////////
   _inputs(context) {
     return Form(
       key: formKey,
@@ -257,27 +248,6 @@ class _MySignupPageState extends State<MySignupPage> {
           ),
         ],
       ),
-    );
-  }
-
-  _haveAccount(context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text(
-          "Already have account? ",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        // btn on press send u to login page
-        TextButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MyLoginPage()));
-            },
-            child: const Text("Login", style: TextStyle(fontSize: 20, color: kPrimaryColor))),
-      ],
     );
   }
 }
