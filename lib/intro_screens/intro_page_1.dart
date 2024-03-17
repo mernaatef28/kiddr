@@ -22,7 +22,7 @@ class IntroPage1 extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    "Welcome to Kidder!",
+                    "Welcome to kiddr!",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class IntroPage1 extends StatelessWidget {
                 Center(
                   child: Container(
                     child: const Text(
-                      "Kidder is your personal guide to understanding your child's health. Our expert system utilizes advanced algorithms to assess symptoms and provide accurate diagnoses and treatment recommendations.",
+                      "kiddr is your personal guide to understanding your child's health. Our expert system utilizes advanced algorithms to assess symptoms and provide accurate diagnoses and treatment recommendations.",
                       style: TextStyle(
                         fontSize: 15,
                       ),

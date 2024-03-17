@@ -22,7 +22,7 @@ class IntroPage2 extends StatelessWidget {
                 ),
                 Container(
                   child: const Text(
-                    "Kidder Service",
+                    "kiddr Service",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,

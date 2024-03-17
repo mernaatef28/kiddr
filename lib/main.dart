@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Kidder',
+      title: 'kiddr',
       theme: ThemeData(
         textTheme: GoogleFonts.agbalumoTextTheme(Theme.of(context).textTheme),
         primaryColor: kPrimaryColor,

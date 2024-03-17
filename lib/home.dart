@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
             alignment: Alignment.center,
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Text("Kidder",
+              Text("kiddr",
                   style: GoogleFonts.acme(fontWeight: FontWeight.bold, fontSize: 40.0, color: kPrimaryColor)),
               // SvgPicture.asset(
               //   "assets/scarab.svg",
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         Container(
           alignment: Alignment.center,
-          child: const Text("Welecome to Kidder, Let's Start ", style: TextStyle(fontSize: 18)),
+          child: const Text("Welecome to kiddr, Let's Start ", style: TextStyle(fontSize: 18)),
         ),
         const SizedBox(
           height: 10,

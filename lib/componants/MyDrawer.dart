@@ -31,7 +31,7 @@ class MyDrawer extends StatelessWidget {
                 color: kPrimaryColor,
               ),
               child: Row(children: [
-                Text('Kidder',
+                Text('kiddr',
                     style: GoogleFonts.acme(color: Colors.white, fontSize: 34, fontWeight: FontWeight.bold)),
                 // Image.asset(
                 //   "assets/AppLogo1.png",
