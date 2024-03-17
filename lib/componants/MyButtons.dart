@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taweret/componants/constants.dart';
-import 'package:taweret/home.dart';
+import 'package:taweret/onbording_screen.dart';
 import 'package:taweret/questions.dart';
 
 class MyHomeButton extends StatelessWidget {
@@ -13,7 +13,7 @@ class MyHomeButton extends StatelessWidget {
     return FloatingActionButton(
       backgroundColor: kPrimaryColor4,
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: const Icon(

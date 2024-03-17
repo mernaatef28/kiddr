@@ -15,7 +15,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:taweret/onbording_screen.dart';
 
-
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
@@ -32,7 +31,7 @@ class MyDrawer extends StatelessWidget {
                 color: kPrimaryColor,
               ),
               child: Row(children: [
-                Text('kiddr',
+                Text('Kidder',
                     style: GoogleFonts.acme(color: Colors.white, fontSize: 34, fontWeight: FontWeight.bold)),
                 // Image.asset(
                 //   "assets/AppLogo1.png",
@@ -48,7 +47,6 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
             },
           ),
-          
           // Get Start icon and btn
           ListTile(
             leading: const Icon(Icons.start),
@@ -58,7 +56,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
             },
           ),
-          
+          // Result btn
 
           // Contact us icon and btn
           ListTile(
@@ -70,13 +68,28 @@ class MyDrawer extends StatelessWidget {
           ),
           const Divider(),
           // btn for Logout
+          // new eddit hear
           ListTile(
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Logout'),
             onTap: () async {
-              GoogleSignIn googleSignIn = GoogleSignIn();
-              googleSignIn.disconnect();
-              await FirebaseAuth.instance.signOut();
+              FirebaseAuth auth = FirebaseAuth.instance;
+              User? user = auth.currentUser;
+
+              try {
+                if (user != null && !user.isAnonymous) {
+                  // Check if the user is logged in with Google
+                  if (user.providerData.any((userInfo) => userInfo.providerId == 'google.com')) {
+                    GoogleSignIn googleSignIn = GoogleSignIn();
+                    await googleSignIn.disconnect();
+                  }
+                }
+              } catch (e) {
+                print('Error disconnecting Google account: $e');
+                // Handle the error here (e.g., show a snackbar or dialog)
+              }
+
+              await auth.signOut();
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyLoginPage()));
             },
           ),

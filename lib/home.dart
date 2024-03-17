@@ -54,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
         width: double.infinity,
         height: 425,
         initialPage: 0,
-        indicatorColor: Colors.blue[400],
-        indicatorBackgroundColor: Colors.grey,
+        indicatorColor: Color.fromARGB(255, 148, 193, 230),
+        indicatorBackgroundColor: const Color.fromARGB(255, 231, 229, 229),
         onPageChanged: (value) {
           print('Page changed: $value');
         },
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
             alignment: Alignment.center,
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Text("kiddr",
+              Text("Kidder",
                   style: GoogleFonts.acme(fontWeight: FontWeight.bold, fontSize: 40.0, color: kPrimaryColor)),
               // SvgPicture.asset(
               //   "assets/scarab.svg",
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         Container(
           alignment: Alignment.center,
-          child: const Text("Welecome to kiddr, Let's Start ", style: TextStyle(fontSize: 18)),
+          child: const Text("Welecome to Kidder, Let's Start ", style: TextStyle(fontSize: 18)),
         ),
         const SizedBox(
           height: 10,
@@ -134,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
         const SizedBox(
           height: 30,
         ),
-        
+
         // second btn for Sign up ->> on pressed
 
         MaterialButton(

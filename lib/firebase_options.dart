@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAIZhD8HjpCDmSXe5ZdHv9eX0eHRgZIc-k',
-    appId: '1:556269759120:android:cd72085c8e7c9bf4760615',
-    messagingSenderId: '556269759120',
-    projectId: 'taweret-3acad',
-    storageBucket: 'taweret-3acad.appspot.com',
+    apiKey: 'AIzaSyC0st1azR4A3eayr3wNX-kpgvehWatAZVU',
+    appId: '1:439262531951:android:414673797fa5cebf01589a',
+    messagingSenderId: '439262531951',
+    projectId: 'taweret-5fbd1',
+    storageBucket: 'taweret-5fbd1.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB0LxosVms_mysNxKrO8b5OFwLG89Vkzr8',
-    appId: '1:556269759120:ios:afeb1a3b99344603760615',
-    messagingSenderId: '556269759120',
-    projectId: 'taweret-3acad',
-    storageBucket: 'taweret-3acad.appspot.com',
+    apiKey: 'AIzaSyAnE4KWOkNC2WAG1n6mn68gF-oRbRg2L1c',
+    appId: '1:439262531951:ios:8276bf7c93639bf001589a',
+    messagingSenderId: '439262531951',
+    projectId: 'taweret-5fbd1',
+    storageBucket: 'taweret-5fbd1.appspot.com',
     iosBundleId: 'com.example.taweret',
   );
 }

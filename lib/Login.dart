@@ -1,13 +1,13 @@
-// ignore_for_file: unused_import
-
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:taweret/LoginSiginupComponants/LoginSignupFooter.dart';
 import 'package:taweret/Signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:taweret/LoginSiginupComponants/LoginSignupHeader.dart';
 import 'package:taweret/componants/constants.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:taweret/getStart.dart';
+
 import 'package:taweret/onbording_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -22,7 +22,8 @@ class _LoginPageState extends State<MyLoginPage> {
   GlobalKey<FormState> formState = GlobalKey();
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
-  // Login With Google Account
+
+  //////****Login With Google Account*******/////
   Future signInWithGoogle() async {
     // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
@@ -40,7 +41,7 @@ class _LoginPageState extends State<MyLoginPage> {
 
     // Once signed in, return the UserCredential
     await FirebaseAuth.instance.signInWithCredential(credential);
-    // if login success show diagonal
+    // if login success show diagonal from package
     setState(() {
       AwesomeDialog(
         btnOkIcon: CupertinoIcons.airplane,
@@ -60,6 +61,8 @@ class _LoginPageState extends State<MyLoginPage> {
 // /////////////////////////////////////////
   @override
   Widget build(BuildContext context) {
+    MySignupPage _createMyLoginPage() => MySignupPage();
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -69,7 +72,11 @@ class _LoginPageState extends State<MyLoginPage> {
             const SizedBox(
               height: 30,
             ),
-            _heder(context),
+            LoginSignupHeader(
+              pageTitle: "Welcome Back",
+              imageLocation: "assets/login6.svg",
+              subtitle: "Enter your data to Login",
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -77,34 +84,14 @@ class _LoginPageState extends State<MyLoginPage> {
             const SizedBox(
               height: 20,
             ),
-            _haveAccount(context),
-            const SizedBox(
-              height: 20,
-            ),
+            LoginSignupFooter(
+              question: "Don't have an account?",
+              nextPage: _createMyLoginPage,
+              btnName: "Sign Up",
+            )
           ],
         ),
       ),
-    );
-  }
-
-// ////////////////////////////////////
-  _heder(context) {
-    return Column(
-      children: [
-        const Text(
-          "Welcome Back",
-          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-        ),
-        SvgPicture.asset(
-          "assets/login6.svg",
-          width: 400,
-          height: 350,
-        ),
-        const Text(
-          "Enter your data to Login",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
-        ),
-      ],
     );
   }
 
@@ -169,9 +156,38 @@ class _LoginPageState extends State<MyLoginPage> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+
+          InkWell(
+            onTap: () async {
+              if (email.text == "") {
+                setState(() {
+                  _showErrorDialog(context, "Enter Your Email First");
+                });
+                return;
+              }
+
+              try {
+                await FirebaseAuth.instance.sendPasswordResetEmail(email: email.text);
+                setState(() {
+                  _showInfoDialog(context, 'Reset Password', 'Check your email and reset your passowrd.');
+                });
+              } on FirebaseAuthException catch (e) {
+                _showErrorDialog(context, e.message.toString());
+              }
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 20),
+              alignment: Alignment.topRight,
+              child: Text(
+                "Forget Password?",
+              ),
+            ),
           ),
+
+          const SizedBox(
+            height: 30,
+          ),
+
           // btn
           MaterialButton(
             // btn on pressed
@@ -181,32 +197,12 @@ class _LoginPageState extends State<MyLoginPage> {
                   final credential = await FirebaseAuth.instance
                       .signInWithEmailAndPassword(email: email.text, password: password.text);
                   setState(() {
-                    AwesomeDialog(
-                      btnOkIcon: CupertinoIcons.airplane,
-                      showCloseIcon: true,
-                      context: context,
-                      dialogType: DialogType.success,
-                      animType: AnimType.scale,
-                      title: 'Sucessfully',
-                      desc: 'Login Sucessfully',
-                      btnOkOnPress: () {
-                        Navigator.pushReplacement(
-                            context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
-                      },
-                    ).show();
+                    _showSuccessDialog(context);
                   });
                 } on FirebaseAuthException catch (e) {
                   setState(() {
-                    AwesomeDialog(
-                      btnOkIcon: CupertinoIcons.repeat,
-                      showCloseIcon: true,
-                      context: context,
-                      dialogType: DialogType.error,
-                      animType: AnimType.scale,
-                      title: 'Error',
-                      desc: 'Wronge Email or Password',
-                      btnOkOnPress: () {},
-                    ).show();
+                    _showErrorDialog(context, 'Wronge Email or Password');
+
                     print("===================${e.code}");
                   });
                 }
@@ -222,6 +218,7 @@ class _LoginPageState extends State<MyLoginPage> {
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
+
           const SizedBox(
             height: 20,
           ),
@@ -241,14 +238,14 @@ class _LoginPageState extends State<MyLoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Login With Google ",
+                  "Continue With Google ",
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
-                Image.asset(
-                  "assets/google.png",
+                SvgPicture.asset(
+                  "assets/Google.svg",
                   width: 30,
                   height: 30,
-                )
+                ),
               ],
             ),
           ),
@@ -257,28 +254,44 @@ class _LoginPageState extends State<MyLoginPage> {
     );
   }
 
-  _haveAccount(context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text(
-          "Don't have an account? ",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        // on press send u to sign up page
-        TextButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MySignupPage()));
-            },
-            child: const Text(
-              "SIGN UP",
-              style: TextStyle(fontSize: 15, color: kPrimaryColor, fontWeight: FontWeight.w600),
-            )),
-      ],
-    );
+  void _showSuccessDialog(BuildContext context) {
+    AwesomeDialog(
+      btnOkIcon: CupertinoIcons.airplane,
+      showCloseIcon: true,
+      context: context,
+      dialogType: DialogType.success,
+      animType: AnimType.scale,
+      title: 'Successfully',
+      desc: 'Login Successfully',
+      btnOkOnPress: () {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
+      },
+    ).show();
+  }
+
+  void _showInfoDialog(BuildContext context, String infoTitle, String infoMessage) {
+    AwesomeDialog(
+      btnOkIcon: CupertinoIcons.airplane,
+      showCloseIcon: true,
+      context: context,
+      dialogType: DialogType.info,
+      animType: AnimType.scale,
+      title: '$infoTitle',
+      desc: '$infoMessage',
+      btnOkOnPress: () {},
+    ).show();
+  }
+
+  void _showErrorDialog(BuildContext context, String errorMessage) {
+    AwesomeDialog(
+      btnOkIcon: CupertinoIcons.repeat,
+      showCloseIcon: true,
+      context: context,
+      dialogType: DialogType.error,
+      animType: AnimType.scale,
+      title: 'Error',
+      desc: errorMessage,
+      btnOkOnPress: () {},
+    ).show();
   }
 }

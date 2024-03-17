@@ -15,7 +15,5 @@ api(data) async {
   var response = await http.post(url, headers: headers, body: data);
   var jsonResponse = convert.jsonDecode(response.body) as Map<String, dynamic>;
 
-return jsonResponse ; 
-
+  return jsonResponse;
 }
-

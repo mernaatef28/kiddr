@@ -1,7 +1,6 @@
-// ignore: unnecessary_import0
-// ignore_for_file: unused_import
-
-import 'dart:ui' as ui;
+// ignore: unnecessary_import
+import 'dart:ui';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +47,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'taweret',
+      title: 'Kidder',
       theme: ThemeData(
         textTheme: GoogleFonts.agbalumoTextTheme(Theme.of(context).textTheme),
         primaryColor: kPrimaryColor,
@@ -61,12 +60,20 @@ class _MyAppState extends State<MyApp> {
             fontSize: 18,
             fontWeight: FontWeight.w500,
           ),
-          // shadowColor: Color.fromARGB(255, 203, 134, 255),
         ),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: FirebaseAuth.instance.currentUser == null ? MyHomePage() : OnBoardingScreen(),
+      // check email Verification
+      home: AnimatedSplashScreen(
+        splashTransition: SplashTransition.scaleTransition,
+        splashIconSize: 200,
+        splash: CircleAvatar(
+          backgroundImage: AssetImage("assets/icon1.png"),
+          radius: 90,
+        ),
+        nextScreen: (FirebaseAuth.instance.currentUser != null) ? OnBoardingScreen() : MyHomePage(),
+      ),
     );
   }
 }

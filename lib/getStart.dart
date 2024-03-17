@@ -4,7 +4,7 @@ import 'package:taweret/componants/constants.dart';
 import 'package:taweret/questions.dart';
 
 class MyGetStartPage extends StatelessWidget {
-  MyGetStartPage({super.key});
+  MyGetStartPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +30,8 @@ class MyGetStartPage extends StatelessWidget {
                   ),
                   Container(
                     child: const Text(
+                      "Your love and care are the greatest gifts you can give your baby.",
                       textAlign: TextAlign.center,
-                      "Your love and care are the greatest gifts you can give your baby.",
                       style: TextStyle(
                         fontSize: 21,
                         fontWeight: FontWeight.bold,

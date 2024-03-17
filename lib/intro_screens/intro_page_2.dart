@@ -22,7 +22,7 @@ class IntroPage2 extends StatelessWidget {
                 ),
                 Container(
                   child: const Text(
-                    "Welcome to kiddr!",
+                    "Kidder Service",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class IntroPage2 extends StatelessWidget {
                 Center(
                   child: Container(
                     child: Text(
-                      "  we are here to help you 24/7 our children’s health is important ",
+                      "  we are here to help you 24/7our children’s health is important ",
                       style: TextStyle(
                         fontSize: 15,
                       ),
