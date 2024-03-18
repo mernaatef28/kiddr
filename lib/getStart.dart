@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:taweret/componants/constants.dart';
 import 'package:taweret/questions.dart';
+import 'generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MyGetStartPage extends StatelessWidget {
   MyGetStartPage({Key? key}) : super(key: key);
@@ -29,8 +31,8 @@ class MyGetStartPage extends StatelessWidget {
                     height: 30,
                   ),
                   Container(
-                    child: const Text(
-                      "Your love and care are the greatest gifts you can give your baby.",
+                    child:  Text(
+                      S.of(context).GetStartedMessage, //GetStartedMessage
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 21,
@@ -54,8 +56,8 @@ class MyGetStartPage extends StatelessWidget {
                               Navigator.of(context)
                                   .push(MaterialPageRoute(builder: (context) => MyQuestionsPage()));
                             },
-                            child: const Text(
-                              "Get Started",
+                            child:  Text(
+                              S.of(context).GetStarted, //GetStarted
                               style: TextStyle(
                                 fontSize: 25,
                                 color: Color.fromARGB(255, 113, 118, 255),

@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "GetStarted": MessageLookupByLibrary.simpleMessage("ابدأى الآن"),
+        "GetStartedMessage": MessageLookupByLibrary.simpleMessage(
+            "حبك ورعايتك هما أعظم هدية يمكنك تقديمها لطفلك "),
         "IntroScreen2text1": MessageLookupByLibrary.simpleMessage("خدمة كيدر"),
         "IntroScreen2text2": MessageLookupByLibrary.simpleMessage(
             "نحن هنا لمساعدتك على مدار الساعة طوال أيام الأسبوع، صحة الأطفال مهمة"),
@@ -29,11 +32,53 @@ class MessageLookup extends MessageLookupByLibrary {
             "كيدر هو دليلك الشخصي لفهم صحة طفلك. يستخدم نظامنا الخبير خوارزميات متقدمة لتقييم الأعراض وتقديم تشخيصات دقيقة وتوصيات للعلاج."),
         "IntroScreenWelcome":
             MessageLookupByLibrary.simpleMessage("مرحباً بك في كيدر! "),
+        "LoginContinueWithGoogle":
+            MessageLookupByLibrary.simpleMessage("متابعة مع جوجل"),
+        "LoginEmailCheck": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال بريدك الإلكتروني"),
+        "LoginEmailEMpty":
+            MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني أولاً"),
+        "LoginEmailHint":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "LoginForgetPass":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "LoginNoAccount":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "LoginPasswordCheck": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال كلمة المرور الخاصة بك"),
+        "LoginPasswordHint":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "LoginResetEmail": MessageLookupByLibrary.simpleMessage(
+            "تحقق من بريدك الإلكتروني وأعد تعيين كلمة المرور الخاصة بك."),
+        "LoginResetpass":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "LoginSubtitle":
+            MessageLookupByLibrary.simpleMessage("أدخل بياناتك لتسجيل الدخول"),
+        "LoginWelcome":
+            MessageLookupByLibrary.simpleMessage("مرحباً بك مجدداً"),
+        "LoginWrongPass": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "MyHomeLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "MyHomeSignUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "MyHomeWelcome":
             MessageLookupByLibrary.simpleMessage("مرحباً بك في كيدر، لنبدأ"),
         "OnBordingDone": MessageLookupByLibrary.simpleMessage("تم"),
-        "OnBordingSkip": MessageLookupByLibrary.simpleMessage("تخطى")
+        "OnBordingSkip": MessageLookupByLibrary.simpleMessage("تخطى"),
+        "SignUpAlreadyExists": MessageLookupByLibrary.simpleMessage(
+            "الحساب موجود بالفعل لهذا البريد الإلكتروني"),
+        "SignUpAlreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "SignUpUsernameEmpty": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال اسم المستخدم الخاص بك"),
+        "SignUpUsernameHint":
+            MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
+        "SignUpWeakPass": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور المقدمة ضعيفة جدا"),
+        "SignupCreateAccount":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "SomethingWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "SucessMessage":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "TryAgain": MessageLookupByLibrary.simpleMessage("حاول مرة أخرى")
       };
 }

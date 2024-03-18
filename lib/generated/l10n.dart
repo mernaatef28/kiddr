@@ -170,11 +170,271 @@ class S {
     );
   }
 
-  /// `Sign Up`
-  String get LoginToSignup {
+  /// `Login Successfully`
+  String get SucessMessage {
     return Intl.message(
-      'Sign Up',
-      name: 'LoginToSignup',
+      'Login Successfully',
+      name: 'SucessMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email`
+  String get LoginEmailCheck {
+    return Intl.message(
+      'Please enter your email',
+      name: 'LoginEmailCheck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get LoginEmailHint {
+    return Intl.message(
+      'Email',
+      name: 'LoginEmailHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your password`
+  String get LoginPasswordCheck {
+    return Intl.message(
+      'Please enter your password',
+      name: 'LoginPasswordCheck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get LoginPasswordHint {
+    return Intl.message(
+      'Password',
+      name: 'LoginPasswordHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Email First`
+  String get LoginEmailEMpty {
+    return Intl.message(
+      'Enter Your Email First',
+      name: 'LoginEmailEMpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get LoginResetpass {
+    return Intl.message(
+      'Reset Password',
+      name: 'LoginResetpass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your email and reset your passowrd.`
+  String get LoginResetEmail {
+    return Intl.message(
+      'Check your email and reset your passowrd.',
+      name: 'LoginResetEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password?`
+  String get LoginForgetPass {
+    return Intl.message(
+      'Forget Password?',
+      name: 'LoginForgetPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wronge Email or Password`
+  String get LoginWrongPass {
+    return Intl.message(
+      'Wronge Email or Password',
+      name: 'LoginWrongPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue With Google `
+  String get LoginContinueWithGoogle {
+    return Intl.message(
+      'Continue With Google ',
+      name: 'LoginContinueWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your love and care are the greatest gifts you can give your baby.`
+  String get GetStartedMessage {
+    return Intl.message(
+      'Your love and care are the greatest gifts you can give your baby.',
+      name: 'GetStartedMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get GetStarted {
+    return Intl.message(
+      'Get Started',
+      name: 'GetStarted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create new account`
+  String get SignupCreateAccount {
+    return Intl.message(
+      'Create new account',
+      name: 'SignupCreateAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have account? `
+  String get SignUpAlreadyHaveAccount {
+    return Intl.message(
+      'Already have account? ',
+      name: 'SignUpAlreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get SignUpUsernameHint {
+    return Intl.message(
+      'Username',
+      name: 'SignUpUsernameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your username`
+  String get SignUpUsernameEmpty {
+    return Intl.message(
+      'Please enter your username',
+      name: 'SignUpUsernameEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak`
+  String get SignUpWeakPass {
+    return Intl.message(
+      'The password provided is too weak',
+      name: 'SignUpWeakPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email`
+  String get SignUpAlreadyExists {
+    return Intl.message(
+      'The account already exists for that email',
+      name: 'SignUpAlreadyExists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong`
+  String get SomethingWrong {
+    return Intl.message(
+      'Something went wrong',
+      name: 'SomethingWrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again`
+  String get TryAgain {
+    return Intl.message(
+      'Try again',
+      name: 'TryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You may have: `
+  String get ResultMayHave {
+    return Intl.message(
+      'You may have: ',
+      name: 'ResultMayHave',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description: `
+  String get ResultDescription {
+    return Intl.message(
+      'Description: ',
+      name: 'ResultDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Symptoms: `
+  String get ResultSymptoms {
+    return Intl.message(
+      'Symptoms: ',
+      name: 'ResultSymptoms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We suggest you to do: `
+  String get ResultSuggest {
+    return Intl.message(
+      'We suggest you to do: ',
+      name: 'ResultSuggest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Common Cold`
+  String get CommonCold {
+    return Intl.message(
+      'Common Cold',
+      name: 'CommonCold',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flu`
+  String get Flu {
+    return Intl.message(
+      'Flu',
+      name: 'Flu',
       desc: '',
       args: [],
     );

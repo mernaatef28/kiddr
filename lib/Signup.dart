@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:taweret/home.dart';
 import 'package:taweret/onbording_screen.dart';
+import 'generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MySignupPage extends StatefulWidget {
   const MySignupPage({key});
@@ -44,9 +46,9 @@ class _MySignupPageState extends State<MySignupPage> {
               height: 30,
             ),
             LoginSignupHeader(
-              pageTitle: "Sign up",
+              pageTitle: S.of(context).MyHomeLogin,
               imageLocation: "assets/login.svg",
-              subtitle: "Create new account",
+              subtitle: S.of(context).SignupCreateAccount, //SignupCreateAccount
             ),
             const SizedBox(
               height: 20,
@@ -56,9 +58,9 @@ class _MySignupPageState extends State<MySignupPage> {
               height: 20,
             ),
             LoginSignupFooter(
-              question: "Already have account? ",
+              question: S.of(context).SignUpAlreadyHaveAccount, //SignUpAlreadyHaveAccount
               nextPage: _createMyLoginPage,
-              btnName: "Login",
+              btnName: S.of(context).MyHomeLogin,
             )
           ],
         ),
@@ -77,7 +79,7 @@ class _MySignupPageState extends State<MySignupPage> {
             child: TextFormField(
               controller: username,
               decoration: InputDecoration(
-                hintText: "Username",
+                hintText: S.of(context).SignUpUsernameHint, //SignUpUsernameHint
                 prefixIcon: Icon(
                   Icons.person,
                   color: kPrimaryColor,
@@ -91,7 +93,7 @@ class _MySignupPageState extends State<MySignupPage> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter your username';
+                  return S.of(context).SignUpUsernameEmpty; //SignUpUsernameEmpty
                 }
                 return null;
               },
@@ -105,7 +107,7 @@ class _MySignupPageState extends State<MySignupPage> {
             child: TextFormField(
               controller: email,
               decoration: InputDecoration(
-                hintText: "Email",
+                hintText: S.of(context).LoginEmailHint, //email
                 prefixIcon: Icon(
                   Icons.email,
                   color: kPrimaryColor,
@@ -119,7 +121,7 @@ class _MySignupPageState extends State<MySignupPage> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter your email';
+                  return S.of(context).LoginEmailCheck; //please enter your email
                 }
                 return null;
               },
@@ -134,7 +136,7 @@ class _MySignupPageState extends State<MySignupPage> {
               obscureText: true,
               controller: password,
               decoration: InputDecoration(
-                hintText: "Password",
+                hintText: S.of(context).LoginPasswordHint, //password
                 prefixIcon: Icon(
                   Icons.lock,
                   color: kPrimaryColor,
@@ -148,7 +150,7 @@ class _MySignupPageState extends State<MySignupPage> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter your password';
+                  return S.of(context).LoginPasswordCheck; //please enter your password
                 }
                 return null;
               },
@@ -173,7 +175,7 @@ class _MySignupPageState extends State<MySignupPage> {
                       dialogType: DialogType.success,
                       animType: AnimType.scale,
                       title: 'Sucessfully',
-                      desc: 'Login Sucessfully',
+                      desc: S.of(context).SucessMessage,
                       btnOkOnPress: () {
                         Navigator.pushReplacement(
                             context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
@@ -190,23 +192,23 @@ class _MySignupPageState extends State<MySignupPage> {
                         dialogType: DialogType.warning,
                         animType: AnimType.scale,
                         title: 'Again',
-                        desc: 'The password provided is too weak',
+                        desc: S.of(context).SignUpWeakPass, //SignUpWeakPass
                         btnOkOnPress: () {},
                       ).show();
                     });
-                    print('The password provided is too weak.');
+                    print(S.of(context).SignUpWeakPass); //SignUpWeakPass
                   } else if (e.code == 'email-already-in-use') {
                     setState(() {
                       AwesomeDialog(
                         btnOkIcon: CupertinoIcons.airplane,
                         showCloseIcon: true,
-                        btnOkText: "Login",
-                        btnCancelText: "Try again",
+                        btnOkText: S.of(context).MyHomeLogin,
+                        btnCancelText: S.of(context).TryAgain, //TryAgain
                         context: context,
                         dialogType: DialogType.warning,
                         animType: AnimType.scale,
                         title: 'Alert',
-                        desc: 'The account already exists for that email',
+                        desc: S.of(context).SignUpAlreadyExists, //SignUpAlreadyExists
                         btnOkOnPress: () {
                           Navigator.pushReplacement(
                               context, MaterialPageRoute(builder: (context) => MyLoginPage()));
@@ -214,7 +216,7 @@ class _MySignupPageState extends State<MySignupPage> {
                         btnCancelOnPress: () {},
                       ).show();
                     });
-                    print('The account already exists for that email.');
+                    print(S.of(context).SignUpAlreadyExists);//SignUpAlreadyExists
                   } else {
                     setState(() {
                       AwesomeDialog(
@@ -224,7 +226,7 @@ class _MySignupPageState extends State<MySignupPage> {
                         dialogType: DialogType.error,
                         animType: AnimType.scale,
                         title: 'Alert',
-                        desc: 'Something went wrong',
+                        desc: S.of(context).SomethingWrong, //SomethingWrong
                         btnOkOnPress: () {},
                       ).show();
                     });
@@ -238,8 +240,8 @@ class _MySignupPageState extends State<MySignupPage> {
             padding: EdgeInsets.only(top: 10, bottom: 10, right: 90, left: 90),
             height: 30,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
-            child: const Text(
-              "Sign UP",
+            child:  Text(
+              S.of(context).MyHomeSignUp,
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
