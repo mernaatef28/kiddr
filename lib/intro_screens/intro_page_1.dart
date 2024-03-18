@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import '../generated/l10n.dart';
 
 class IntroPage1 extends StatelessWidget {
   const IntroPage1({super.key});
@@ -22,7 +24,7 @@ class IntroPage1 extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    "Welcome to kiddr!",
+                    S.of(context).IntroScreenWelcome , // IntroScreenWelcome 
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -34,8 +36,8 @@ class IntroPage1 extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                    child: const Text(
-                      "kiddr is your personal guide to understanding your child's health. Our expert system utilizes advanced algorithms to assess symptoms and provide accurate diagnoses and treatment recommendations.",
+                    child: Text( // IntroScreenQuote 
+                      S.of(context).IntroScreenQuote,
                       style: TextStyle(
                         fontSize: 15,
                       ),

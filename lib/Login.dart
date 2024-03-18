@@ -11,6 +11,10 @@ import 'package:taweret/componants/constants.dart';
 import 'package:taweret/onbording_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import 'generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+
 class MyLoginPage extends StatefulWidget {
   const MyLoginPage({super.key});
 
@@ -49,8 +53,8 @@ class _LoginPageState extends State<MyLoginPage> {
         context: context,
         dialogType: DialogType.success,
         animType: AnimType.scale,
-        title: 'Sucessfully',
-        desc: 'Login Sucessfully',
+        title: 'Sucessfully', 
+        desc: 'Login Sucessfully',// SucessMessage 
         btnOkOnPress: () {
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OnBoardingScreen()));
         },
@@ -73,9 +77,9 @@ class _LoginPageState extends State<MyLoginPage> {
               height: 30,
             ),
             LoginSignupHeader(
-              pageTitle: "Welcome Back",
+              pageTitle: S.of(context).LoginWelcome, //LoginWelcome
               imageLocation: "assets/login6.svg",
-              subtitle: "Enter your data to Login",
+              subtitle: S.of(context).LoginSubtitle, //LoginSubtitle
             ),
             const SizedBox(
               height: 20,
@@ -85,9 +89,9 @@ class _LoginPageState extends State<MyLoginPage> {
               height: 20,
             ),
             LoginSignupFooter(
-              question: "Don't have an account?",
+              question: S.of(context).LoginNoAccount, // LoginNoAccount
               nextPage: _createMyLoginPage,
-              btnName: "Sign Up",
+              btnName: S.of(context).LoginToSignup, //LoginToSignup
             )
           ],
         ),

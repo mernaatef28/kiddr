@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import '../generated/l10n.dart'; 
+
 
 class IntroPage2 extends StatelessWidget {
   const IntroPage2({super.key});
@@ -21,8 +24,8 @@ class IntroPage2 extends StatelessWidget {
                   height: 380,
                 ),
                 Container(
-                  child: const Text(
-                    "kiddr Service",
+                  child:  Text(
+                    S.of(context).IntroScreen2text1, //IntroScreen2text1
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -35,7 +38,7 @@ class IntroPage2 extends StatelessWidget {
                 Center(
                   child: Container(
                     child: Text(
-                      "  we are here to help you 24/7our children’s health is important ",
+                     S.of(context).IntroScreen2text2, //IntroScreen2text2
                       style: TextStyle(
                         fontSize: 15,
                       ),

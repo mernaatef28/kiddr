@@ -15,6 +15,9 @@ import 'package:flutter/rendering.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
 import 'package:taweret/onbording_screen.dart';
+// for arabic english localization 
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -47,6 +50,16 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // for the ar- en localization 
+      locale: const Locale("ar"),
+      localizationsDelegates: [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+            ],
+      supportedLocales: S.delegate.supportedLocales,
+
       title: 'kiddr',
       theme: ThemeData(
         textTheme: GoogleFonts.agbalumoTextTheme(Theme.of(context).textTheme),

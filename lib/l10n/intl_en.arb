@@ -1,0 +1,19 @@
+{
+    "MyHomeWelcome" : "Welecome to kiddr, Let's Start " ,
+    "MyHomeLogin" : "Login",
+    "MyHomeSignUp" :"Sign Up" ,
+    "OnBordingSkip" : "Skip",
+    "OnBordingDone" : "Done",
+    "IntroScreenWelcome" : "Welcome to kiddr!",
+    "IntroScreenQuote" : "kiddr is your personal guide to understanding your child's health. Our expert system utilizes advanced algorithms to assess symptoms and provide accurate diagnoses and treatment recommendations.",
+    "IntroScreen2text1" : "kiddr Service",
+    "IntroScreen2text2" : "  we are here to help you 24/7 children’s health is important " ,
+    "LoginWelcome" : "Welcome Back",
+    "LoginSubtitle" : "Enter your data to Login",
+    "LoginNoAccount" : "Don't have an account? ",
+    "LoginToSignup" : "Sign Up"
+
+
+    
+
+}
