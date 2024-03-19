@@ -152,6 +152,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "استخدم مرطب الهواء، اشرب الكثير من السوائل، وتناول مزيلات الاحتقان ومسكنات الألم التي يمكن شراؤها دون وصفة طبية. إذا استمرت الأعراض لأكثر من أسبوع، اطلب المساعدة الطبية."),
         "ParanasalSinusitisSymptoms": MessageLookupByLibrary.simpleMessage(
             "احتقان الأنف، ألم الوجه، سيلان الأنف، فقدان الشم"),
+        "QuestionAnswerPleasemass": MessageLookupByLibrary.simpleMessage(
+            "يرجى الإجابة على هذه الأسئلة"),
+        "QuestionLetsgo": MessageLookupByLibrary.simpleMessage("هيا بنا"),
         "ResultDescription": MessageLookupByLibrary.simpleMessage("الوصف:"),
         "ResultMayHave": MessageLookupByLibrary.simpleMessage("قد يكون لديك:"),
         "ResultSuggest":

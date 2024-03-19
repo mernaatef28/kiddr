@@ -106,7 +106,10 @@
   "DiarrhealDiseases": "Diarrheal Diseases",
   "DiarrhealDiseasesDescription": "Diarrheal diseases are disorders characterized by abnormally frequent or liquid bowel movements. They are usually caused by bacteria, viruses, or parasites.",
   "DiarrhealDiseasesSymptoms": "frequent_loose_or_liquid_bowel_movements, abdominal_pain, fever",
-  "DiarrhealDiseasesSuggest": "Stay hydrated, eat bland foods, and rest. Over-the-counter anti-diarrheal medication may also help. Seek medical attention if symptoms persist or worsen."
+  "DiarrhealDiseasesSuggest": "Stay hydrated, eat bland foods, and rest. Over-the-counter anti-diarrheal medication may also help. Seek medical attention if symptoms persist or worsen.",
+
+  "QuestionLetsgo": "Let's Go",
+  "QuestionAnswerPleasemass": "Answer this Questions please"
 
 
       

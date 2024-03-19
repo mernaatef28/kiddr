@@ -150,6 +150,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Use a humidifier, drink plenty of fluids, and take over-the-counter decongestants and pain relievers. If symptoms persist for more than a week, seek medical attention."),
         "ParanasalSinusitisSymptoms": MessageLookupByLibrary.simpleMessage(
             "nasal_congestion, facial_pain, runny_nose, loss_of_smell"),
+        "QuestionAnswerPleasemass": MessageLookupByLibrary.simpleMessage(
+            "Answer this Questions please"),
+        "QuestionLetsgo": MessageLookupByLibrary.simpleMessage("Let\'s Go"),
         "ResultDescription":
             MessageLookupByLibrary.simpleMessage("Description: "),
         "ResultMayHave": MessageLookupByLibrary.simpleMessage("You may have: "),

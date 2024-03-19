@@ -14,6 +14,9 @@ import 'dart:convert' as convert;
 
 import 'package:taweret/result_loading.dart';
 
+import 'package:taweret/generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 class MyQuestionsPage extends StatefulWidget {
   const MyQuestionsPage({super.key});
 
@@ -33,6 +36,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
   int currentQuestionIndex = 0;
   late List<String> questions;
   late List<String> show;
+  late List<String> showar;
   late List<bool?> answervalues;
   // Map sort the result of each question in the runtime
   Map<String, bool?> answers = {};
@@ -93,6 +97,33 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
       "nasal congestion",
       "headache",
     ];
+    showar = [
+      "حمى",
+      "سعال",
+      "سيلان الأنف",
+      "التهاب الحلق",
+      "التعب",
+      "آلام الجسم",
+      "طفح جلدي",
+      "الحكة",
+      "الغدد المنتفخة",
+      "القيء",
+      "الإسهال",
+      "ألم في البطن",
+      "ألم الأذن",
+      "العطس",
+      "العيون الحكاكة",
+      "التبول المتكرر",
+      "فقدان الوزن غير المبرر",
+      "الجفاف",
+      "صعوبة في التنفس",
+      "صعوبة في النوم",
+      "البثور",
+      "العطش الشديد",
+      "احتقان الأنف",
+      "صداع",
+    ];
+
     answervalues =
         List.filled(questions.length, null); // Initialize answervalues with the same length as questions
   }
@@ -212,8 +243,8 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
       children: [
         Container(
           alignment: Alignment.center,
-          child: const Text(
-            "Let's Go",
+          child:  Text(
+            S.of(context).QuestionLetsgo , //QuestionLetsgo
             style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
           ),
         ),
@@ -222,7 +253,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
         ),
         Container(
           alignment: Alignment.center,
-          child: const Text("Answer this Questions please", style: TextStyle(fontSize: 18)),
+          child:  Text(S.of(context).QuestionAnswerPleasemass, style: TextStyle(fontSize: 18)), // QuestionAnswerPleasemass
         )
       ],
     );
@@ -279,7 +310,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
             children: <Widget>[
               /////// Q n --->>>
               Text(
-                "Q${currentQuestionIndex + 1}- Do you have ${show[currentQuestionIndex]}?",
+                Locale=='en'?"Q${currentQuestionIndex + 1}- Do you have ${show[currentQuestionIndex]}?": ":س${currentQuestionIndex + 1}- هل يظهر عليع عرض   ${showar[currentQuestionIndex]}?",
                 style: GoogleFonts.agbalumo(fontSize: 18.0),
               ),
               const SizedBox(height: 20.0),
@@ -299,7 +330,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
                     },
                   ),
                   const Text(
-                    'Yes             ',
+                    Locale=='en'?'Yes             ':'نعم         ' ,
                     style: TextStyle(fontSize: 20),
                   ),
                   Radio<bool>(
@@ -313,7 +344,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
                     },
                   ),
                   const Text(
-                    'No',
+                    Locale=='en'?'No': 'لا' ,
                     style: TextStyle(fontSize: 20),
                   ),
                 ],

@@ -939,6 +939,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Let's Go`
+  String get QuestionLetsgo {
+    return Intl.message(
+      'Let\'s Go',
+      name: 'QuestionLetsgo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Answer this Questions please`
+  String get QuestionAnswerPleasemass {
+    return Intl.message(
+      'Answer this Questions please',
+      name: 'QuestionAnswerPleasemass',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
