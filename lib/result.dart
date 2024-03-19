@@ -1,6 +1,7 @@
 // ignore_for_file: use_super_parameters
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:taweret/componants/data.dart';
 import 'package:taweret/componants/showdata.dart';
 import 'package:taweret/componants/MyDrawer.dart';
 import 'package:taweret/generated/l10n.dart';
@@ -15,12 +16,29 @@ class result extends StatefulWidget {
 
 // ignore: non_constant_identifier_names
 class _resultState extends State<result> {
-  late Map<String, dynamic> data;
+  late Map<String, dynamic> apidata;
+  late Map<String, dynamic> diseaseList ={};
   @override
-  void initState() {
-    data = widget.apiresult;
-    super.initState();
-  }
+ @override
+void initState() {
+  super.initState();
+  apidata = widget.apiresult;
+  print("============the disease name from the api is : ${apidata['name']}") ;
+  
+  // Call returnDiseaseInfo and update the UI after the data is fetched.
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    returnDiseaseInfo(context, apidata['name']).then((result) {
+      if (mounted) {
+        setState(() {
+          diseaseList = result;
+          print("============the list is : $diseaseList");
+        });
+      }
+    });
+  });
+}
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +64,11 @@ class _resultState extends State<result> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                showdata(field: "${data['name']}", data: S.of(context).ResultMayHave), //ResultMayHave
-                showdata(field: "${data['description']}", data: S.of(context).ResultDescription), //ResultDescription
-                showdata(field: "${data['symptoms']}", data: S.of(context).ResultSymptoms), //ResultSymptoms
-                showdata(field: "${data['treatment']}", data: S.of(context).ResultSuggest), //ResultSuggest
+                
+                showdata(field: "${diseaseList["name"]}", data: S.of(context).ResultMayHave), //ResultMayHave
+                showdata(field: "${diseaseList['description']}", data: S.of(context).ResultDescription), //ResultDescription
+                showdata(field: "${diseaseList['symptoms']}", data: S.of(context).ResultSymptoms), //ResultSymptoms
+                showdata(field: "${diseaseList['suggest']}", data: S.of(context).ResultSuggest), //ResultSuggest
               ]),
         ),
       ]),

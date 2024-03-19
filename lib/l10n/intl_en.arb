@@ -44,9 +44,70 @@
     "ResultSuggest": "We suggest you to do: " ,
 
     "CommonCold" : "Common Cold" ,
-    "Flu" : "Flu" ,
-    "Flu" : "Flu" ,
-    "Flu" : "Flu" ,
-    "Flu" : "Flu" 
+    "CommonColdDiscription" : "Gastroenteritis, commonly known as stomach flu, is an inflammation of the stomach and intestines caused by viral or bacterial infection. Symptoms include diarrhea, vomiting, stomach cramps, and fever." ,
+    "CommonColdSymptoms" : "vomiting, diarrhea, abdominal_pain" ,
+    "CommonColdSuggest" : "Stay hydrated with electrolyte solutions, eat bland foods like rice and toast, and rest. Seek medical attention if symptoms worsen or persist. In severe cases, hospitalization may be necessary." ,
+    
+    "Flu": "Flu",
+    "FluDescription": "Influenza, commonly known as the flu, is a highly contagious viral infection that affects the respiratory system. Symptoms often include high fever, muscle aches, headache, fatigue, and cough.",
+    "FluSymptoms": "fever, cough, fatigue, body_aches",
+    "FluSuggest": "Rest, drink plenty of fluids, and take antiviral medication if prescribed by a doctor. Over-the-counter medications such as pain relievers, decongestants, and cough suppressants can help alleviate symptoms. In severe cases, hospitalization may be necessary.",
+
+    "Chickenpox": "Chickenpox",
+    "ChickenpoxDescription": "Chickenpox is a highly contagious viral infection characterized by an itchy rash, fever, and fatigue. It is caused by the varicella-zoster virus.",
+    "ChickenpoxSymptoms": "fever, rash, itchiness, fatigue",
+    "ChickenpoxSuggest": "Apply calamine lotion to relieve itching, take oatmeal baths to soothe the skin, and avoid scratching the rash to prevent scarring. Over-the-counter pain relievers such as acetaminophen or ibuprofen can help reduce fever and discomfort." ,
+      
+   "StrepThroat": "Strep Throat",
+  "StrepThroatDescription": "Strep throat is a bacterial infection that causes inflammation and soreness of the throat, often accompanied by fever and swollen lymph nodes in the neck.",
+  "StrepThroatSymptoms": "sore_throat, fever, swollen_glands",
+  "StrepThroatSuggest": "Take antibiotics as prescribed by a doctor to treat the bacterial infection. Rest, drink plenty of fluids, and use over-the-counter pain relievers such as acetaminophen or ibuprofen to alleviate symptoms.",
+
+  "Gastroenteritis": "Gastroenteritis",
+  "GastroenteritisDescription": "Gastroenteritis, commonly known as stomach flu, is an inflammation of the stomach and intestines caused by viral or bacterial infection. Symptoms include diarrhea, vomiting, stomach cramps, and fever.",
+  "GastroenteritisSymptoms": "vomiting, diarrhea, abdominal_pain",
+  "GastroenteritisSuggest": "Stay hydrated with electrolyte solutions, eat bland foods like rice and toast, and rest. Seek medical attention if symptoms worsen or persist. In severe cases, hospitalization may be necessary.",
+
+  "Asthma": "Asthma",
+  "AsthmaDescription": "Asthma is a chronic respiratory condition characterized by inflammation and narrowing of the airways, leading to wheezing, shortness of breath, chest tightness, and coughing.",
+  "AsthmaSymptoms": "cough, wheezing, difficulty_breathing",
+  "AsthmaSuggest": "Use inhalers as prescribed to control symptoms and prevent asthma attacks. Avoid triggers such as allergens and irritants, and seek medical help if symptoms worsen despite treatment.",
+
+  "EarInfection": "Ear Infection",
+  "EarInfectionDescription": "An ear infection, or otitis media, is an inflammation of the middle ear often caused by bacterial or viral infection. Symptoms include ear pain, fever, and sometimes hearing loss.",
+  "EarInfectionSymptoms": "ear pain, fever, difficulty_sleeping",
+  "EarInfectionSuggest": "Take antibiotics as prescribed by a doctor to treat the bacterial infection. Apply warm compresses to the ear to relieve pain, and use over-the-counter pain relievers such as acetaminophen or ibuprofen.",
+
+  "Allergies": "Allergies",
+  "AllergiesDescription": "Allergies occur when the immune system reacts abnormally to substances that are usually harmless, such as pollen, dust mites, pet dander, or certain foods. Symptoms vary depending on the allergen but commonly include sneezing, runny nose, itchy eyes, and rash.",
+  "AllergiesSymptoms": "runny nose, sneezing, itchy_eyes, itchiness",
+  "AllergiesSuggest": "Avoid known allergens, use antihistamines to control symptoms, and seek medical help if symptoms worsen.",
+
+  "Measles": "Measles",
+  "MeaslesDescription": "Measles is a highly contagious viral disease characterized by fever, cough, conjunctivitis, and a rash. It is preventable by vaccination.",
+  "MeaslesSymptoms": "fever, cough, rash, conjunctivitis",
+  "MeaslesSuggest": "Rest, drink plenty of fluids, and take over-the-counter medication to relieve symptoms. Seek medical attention if symptoms worsen.",
+
+  "HandFootMouthDisease": "Hand, Foot, and Mouth Disease",
+  "HandFootMouthDiseaseDescription": "Hand, foot, and mouth disease is a common viral illness that usually affects infants and children younger than 5 years old. Symptoms include fever, mouth sores, and a rash on the hands and feet.",
+  "HandFootMouthDiseaseSymptoms": "fever, mouth_sores, rash_on_hands_and_feet",
+  "HandFootMouthDiseaseSuggest": "Rest, stay hydrated, and take over-the-counter pain relievers to manage symptoms. The disease usually doesn't require specific treatment and goes away on its own in 7 to 10 days.",
+
+  "Diabetes": "Diabetes",
+  "DiabetesDescription": "Diabetes is a chronic disease that occurs when the pancreas is no longer able to make insulin, or when the body cannot make good use of the insulin it produces.",
+  "DiabetesSymptoms": "frequent_urination, excessive_thirst, unexplained_weight_loss, fatigue",
+  "DiabetesSuggest": "Maintain a healthy diet, exercise regularly, monitor blood sugar levels, and take prescribed medication. Regular check-ups with a healthcare provider are also important.",
+
+  "ParanasalSinusitis": "Paranasal Sinusitis",
+  "ParanasalSinusitisDescription": "Paranasal sinusitis is an inflammation or infection of the sinuses around the nose. It's often caused by a viral or bacterial infection.",
+  "ParanasalSinusitisSymptoms": "nasal_congestion, facial_pain, runny_nose, loss_of_smell",
+  "ParanasalSinusitisSuggest": "Use a humidifier, drink plenty of fluids, and take over-the-counter decongestants and pain relievers. If symptoms persist for more than a week, seek medical attention.",
+
+  "DiarrhealDiseases": "Diarrheal Diseases",
+  "DiarrhealDiseasesDescription": "Diarrheal diseases are disorders characterized by abnormally frequent or liquid bowel movements. They are usually caused by bacteria, viruses, or parasites.",
+  "DiarrhealDiseasesSymptoms": "frequent_loose_or_liquid_bowel_movements, abdominal_pain, fever",
+  "DiarrhealDiseasesSuggest": "Stay hydrated, eat bland foods, and rest. Over-the-counter anti-diarrheal medication may also help. Seek medical attention if symptoms persist or worsen."
+
+
       
 }

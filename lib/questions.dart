@@ -134,6 +134,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
       // Call the api function and handle the result
       var resultresponse = await api(convert.jsonEncode(answers));
       print('API Response: $resultresponse');
+      print("============the disease name from the api is : ${resultresponse['name']}") ;
       // ignore: use_build_context_synchronously
       Navigator.push(context, MaterialPageRoute(builder: (context) => splashscreen(resultresponse)));
 
