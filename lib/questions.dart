@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:taweret/componants/MyButtons.dart';
 import 'package:taweret/componants/MyDrawer.dart';
 import 'package:taweret/componants/constants.dart';
@@ -37,11 +38,38 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
   late List<String> questions;
   late List<String> show;
   late List<String> showar;
+  
   late List<bool?> answervalues;
   // Map sort the result of each question in the runtime
   Map<String, bool?> answers = {};
   // List for Questions
-
+   // imges list for each symptom
+  List<String> photos = [
+    "fever.gif", //
+    "cough.gif", //
+    "runny_nose.png", //
+    "sore_throat.png", //
+    "fatigue.png", //
+    "body_aches.json", //
+    "rash.png", //
+    "itchiness.png", //
+    "swollen_glands.png", //
+    "vomiting.png", //
+    "diarrhea.png", //
+    "abdominal_pain.png", //
+    "ear_pain.png", //
+    "sneezing.json", //
+    "itchy_eyes.png", //
+    "frequent_urination.png", //
+    "unexplained_weight_loss.png", //
+    "dehydration.png", //
+    "difficulty_breathing.png", //
+    "difficulty_sleeping.png", //
+    "blisters.png", //
+    "excessive_thirst.png", //
+    "nasal_congestion.png", //
+    "headache.png",
+  ];
   @override
   void initState() {
     super.initState();
@@ -123,7 +151,7 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
       "احتقان الأنف",
       "صداع",
     ];
-
+   
     answervalues =
         List.filled(questions.length, null); // Initialize answervalues with the same length as questions
   }
@@ -309,9 +337,19 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               /////// Q n --->>>
-              Text(
-                Locale=='en'?"Q${currentQuestionIndex + 1}- Do you have ${show[currentQuestionIndex]}?": ":س${currentQuestionIndex + 1}- هل يظهر عليع عرض   ${showar[currentQuestionIndex]}?",
-                style: GoogleFonts.agbalumo(fontSize: 18.0),
+
+              Row(
+                children: [
+                  // New Editing for images
+                  Expanded(
+                    flex: 7,
+                    child: Text(
+                     Locale=='en'?"Q${currentQuestionIndex + 1}- Do you have ${show[currentQuestionIndex]}?": "س${currentQuestionIndex + 1}:- هل يظهر عليه عرض   ${showar[currentQuestionIndex]}؟",
+                      style: GoogleFonts.agbalumo(fontSize: 18.0),
+                    ),
+                  ),
+                  Expanded(flex: 2, child: chooseImage("symptoms/${photos[currentQuestionIndex]}")),
+                ],
               ),
               const SizedBox(height: 20.0),
 
@@ -363,5 +401,21 @@ class _MyQuestionsPageState extends State<MyQuestionsPage> {
         ),
       )
     ]);
+  }
+}
+// choose or determinate image xtension
+Widget chooseImage(String photo) {
+  if (photo.endsWith(".json")) {
+    return Lottie.asset(
+      "$photo",
+      width: 65,
+      height: 65,
+    );
+  } else {
+    return Image.asset(
+      "$photo",
+      width: 65,
+      height: 65,
+    );
   }
 }
