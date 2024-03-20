@@ -10,8 +10,8 @@
 ### Project's Team:
 
 1) Merna Atef [@mernaatef28](https://github.com/mernaatef28/)
-2) Gehad Ahmed
+2) Gehad Ahmed [@gehadAhmed](https://github.com/gehaddd/)
 3) Rawan Sied [@rawan0sayed](https://github.com/rawan0sayed/)
 4) Ismail Sherif [@ThisIsMrIsmail](https://github.com/ThisIsMrIsmail/)
-5) Gehad Ahmed
-6) Mark Magdy [@MarkMagdyShawky](https://github.com/MarkMagdyShawky/)
+5)  Mark Magdy [@MarkMagdyShawky](https://github.com/MarkMagdyShawky/)
+6) Gehad mamdouh
